@@ -247,19 +247,20 @@ header{
 footer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     background-color: var(--colorFondoFooter);
     font-family: var(--fuenteGeneral);
+    padding: 20px 50px;
+    height: 450px;
 }
 
 .pie-filas{
     display: flex;
     flex-direction: column;
-    height: 185px;
+    height: 100%;
     max-width: 1208px;
     width: 100%;
-    padding: 20px 0;
     color: var(--colorAzulOscuro);
     gap: 40px;
     font-size: var(--textoMediano);
@@ -274,6 +275,8 @@ footer{
     width: 100%;
     gap: 20px;
     padding-top: 20px;
+    align-items: start;
+    text-align: start;
 }
 .pie-lado{
     display: flex;
@@ -290,9 +293,11 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    width: 100%;
+}
+.imagen-logo-principal-pie{
     max-width: 120px;
     min-width: 120px;
-    width: 100%;
 }
 .--pie-redes{
     padding: 0;
@@ -308,6 +313,25 @@ footer{
     border-top: 1px solid var(--colorFooterLinea);
     padding: 30px 0;
 }
+.pie-fila-medios-pago{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+.imagen-pie-medio-pago{
+    width: 60px;
+    border-radius: 8px;
+    border: 1px solid var(--colorFooterLinea);
+}
+.pie-fila-terminos{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 50%;
+    text-align: start;
+}
+
 /*--------------Fin estilo seccion pie-----------------------*/
 
 /*----------------------Estilos botones----------------------*/
@@ -483,27 +507,14 @@ li{
     .seccion-migracion{
         padding: 30px 40px;
     }
-    .pie-fila{
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-    }
-    .--primero{
-        order:1;
-    }
-    .--segundo{
-        order:2;
-    }
-    .--pie-redes{
-        gap: 20px;
-        justify-content: end;
-    }
- 
 
 }
 
 @media (min-width: 1025px){
 
+    footer{
+        height: 250px;
+    }
     header{
         padding: 0 40px;
     }
@@ -556,6 +567,25 @@ li{
     .seccion-migracion_inferior .tarjeta {
         flex: 1;
         align-items: stretch;
+    }
+    .pie-fila{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .pie-fila-terminos{
+        text-align: end;
+    }
+ 
+    .--primero{
+        order:1;
+    }
+    .--segundo{
+        order:2;
+    }
+    .--pie-redes{
+        gap: 20px;
+        justify-content: end;
     }
 
 }
